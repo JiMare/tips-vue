@@ -1,4 +1,11 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from "vue";
+import App from "./App.vue";
+import InputComponent from "./components/InputComponent.vue";
+import TipButton from "./components/TipButton.vue";
 
-createApp(App).mount('#app')
+const app = createApp(App);
+
+app.component("input-component", InputComponent);
+app.component("tip-button", TipButton);
+
+app.mount("#app");

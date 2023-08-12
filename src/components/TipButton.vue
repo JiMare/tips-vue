@@ -1,10 +1,5 @@
 <template>
-  <button
-    :class="{ selected: isSelected }"
-    @click="$emit('toggle-selected', this.percent)"
-  >
-    {{ percent }}%
-  </button>
+  <button :class="{ selected: isSelected }">{{ percent }}%</button>
 </template>
 
 <script>

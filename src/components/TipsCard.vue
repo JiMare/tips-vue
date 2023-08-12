@@ -7,7 +7,7 @@
         :key="tip.percent"
         :isSelected="tip.selected"
         :percent="tip.percent"
-        @toggle-selected="onSelected"
+        @click="onSelected(tip.percent)"
       ></tip-button>
       <CustomTip
         @input="(value) => (this.customTip = Number(value))"
@@ -21,7 +21,7 @@
 import CustomTip from "./CustomTip.vue";
 
 export default {
-  component: { CustomTip },
+  components: { CustomTip },
   data() {
     return {
       tips: [
@@ -59,7 +59,6 @@ export default {
       this.customTip = null;
     },
   },
-  components: { CustomTip },
 };
 </script>
 

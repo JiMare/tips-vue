@@ -10,8 +10,7 @@
         @click="onSelected(tip.percent)"
       ></tip-button>
       <CustomTip
-        @input="(value) => (this.customTip = Number(value))"
-        :value="customTip"
+        v-model.number="customTip"
       />
     </div>
   </div>

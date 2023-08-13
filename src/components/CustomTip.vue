@@ -1,14 +1,14 @@
 <template>
-  <input placeholder="Custom" type="number" :value="value" @input="updateValue" />
+  <input placeholder="Custom" type="number" :value="modelValue" @input="updateValue"/>
 </template>
 
 <script>
 export default {
-  emits: ["input"],
-  props: ["value"],
+  emits: ["update:modelValue"],
+  props: ["modelValue"],
   methods: {
     updateValue(event) {
-      this.$emit("input", event.target.value);
+      this.$emit("update:modelValue", event.target.value);
     },
   },
 };
